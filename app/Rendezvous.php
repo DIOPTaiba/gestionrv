@@ -12,8 +12,12 @@ class Rendezvous extends Model
                                 'libelle'=>'required|min:20',
                                 'date'=>'required|min:3'
                                 );
-    public function rendezvous()
+    public function medecins()
     {
-        return $this->hasMany('App\Rendezvous');
+        return $this->belongsTo('App\Medecin');
+    }
+    public function users()
+    {
+        return $this->belongsTo('App\User');
     }
 }

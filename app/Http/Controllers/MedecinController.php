@@ -7,6 +7,11 @@ use Illuminate\Http\Request;
 
 class MedecinController extends Controller
 {
+    //gestion des connexions déconnexion
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function add()
     {
         return view('medecin.add');

@@ -31,6 +31,8 @@ Route::get('/rendezvous/edit/{id}', 'RendezvousController@edit')->name('editrend
 Route::post('/rendezvous/update', 'RendezvousController@update')->name('updaterendezvous');
 Route::get('/rendezvous/delete/{id}', 'RendezvousController@delete')->name('deleterendezvous');
 Route::get('/rendezvous/getAll', 'RendezvousController@getAll')->name('getallrendezvous');
+Route::post('/rendezvous/persist', 'RendezvousController@persist')->name('persistrendezvous');
+
 
 
 

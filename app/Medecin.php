@@ -13,6 +13,6 @@ class Medecin extends Model
                                  );
     public function rendezvous()
     {
-        return $this->belongsTo('App\Medecin');
+        return $this->hasMany('App\Rendezvous');
     }
 }
