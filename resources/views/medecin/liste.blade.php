@@ -23,11 +23,11 @@
                                     <td>{{ $medecin->nom }}</td>
                                     <td>{{ $medecin->telephone }}</td>
                                     <td><a href="{{ route('editmedecin', ['id' => $medecin->id]) }}">Editer</a></td>
-                                    <td><a href="{{ route('deletemedecin', ['id' => $medecin->id]) }}">Supprimer</a></td>
+                                    <td><a href="{{ route('deletemedecin', ['id' => $medecin->id]) }}" onclick="return confirm('Voulez-vous vraiment supprimer ce medecin ?');" >Supprimer</a></td>
                                 </tr>
                             @endforeach
-
                         </table>
+                        {{ $liste_medecins->links() }}
                     </div>
                 </div>
             </div>
